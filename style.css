@@ -1,0 +1,182 @@
+.container{	
+	
+}
+.Yahtzee{
+	background:url('Icons/bluewood.jpg');
+	width:50rem;
+	margin: auto;
+	border:1px solid blue;
+	border-radius:20px;
+	padding:5px;
+	display:flex;
+}
+.player_container{
+	display:flex;
+}
+.player_container div{
+	text-align:center;
+}
+.player_container div p{
+	color:white;
+	font-size:1.5rem;
+	font-weight:bold;
+}
+.Yahtzee_icon_container{
+	margin-left:4rem;
+}
+.Yahtzee_icon{
+	width:30rem;
+	height:10rem;	
+	opacity:0.6;
+}
+.Yahtzee_icon:hover{
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.players{
+	width:70%;
+	margin:10px;
+	height:30%;
+}
+.dobbelsteen_icon ,.players button{
+	width:5rem;
+	height:5rem;
+	border-radius:20px;
+	border:2px solid black;
+}
+.players button{
+	margin-left:10px;
+	
+}
+.dobbelsteen_icon{
+	background:rgba(255,255,255,0.5);
+	
+}
+.result{
+	width:30%;
+	background:rgba(255,255,255,0.6);
+	border-radius:20px;
+	padding:5px;
+	text-align:center;
+	
+}
+.title{
+	width:100%;
+	background:rgba(0,0,0,0.6);
+	border-radius:20px;
+	color:white;
+}
+.result_container{
+	display:flex;
+	width:100%;	
+					
+}
+.player_column{
+	margin-top:6px;
+	width:25%;
+	font-size:20px;
+		
+}
+.information_column p,.player_column p{
+	margin:0;
+}
+.information_column{
+	width:50%;
+	font-size:20px;
+}
+.chooice{
+	font-size:12px;
+}
+
+
+@keyframes shake {
+10%, 90% {
+	transform: translate3d(-1px, 0, 0);
+}
+
+20%, 80% {
+	transform: translate3d(2px, 0, 0);
+}
+
+30%, 50%, 70% {
+	transform: translate3d(-4px, 0, 0);
+}
+
+40%, 60% {
+	transform: translate3d(4px, 0, 0);
+}
+}
+.dobbelsteen_icon:hover {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.menu button{
+	width:10rem;
+	font-size:1em;
+	border-radius:20px;
+	margin:1px;
+}
+#ExitBack , #start,#start_menu2,#ExitBack_menu2{
+	background:red;
+}
+#b1 ,#b2 ,#b1_men2,#b2_men2{
+	background:green;
+}
+.playerID{
+	color:white;
+}
+.menu2{
+		display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px) {
+	.Yahtzee{
+		display:inline-block;
+		background-size: cover;
+	}
+	.result{
+		width:90%;
+		margin:auto;
+	}
+	.Yahtzee_icon{
+		width:40rem;
+	}
+	.player_container div{
+		width:40rem;
+	}
+	.players {
+		width: 90%;
+		height:10%;
+		margin:auto;
+	}
+	.dobbelsteen_icon,.players button{
+		width: 7rem;
+		height: 7rem;
+	}
+	.menu button{
+		display:none;
+	}
+	.menu2{
+		display: block;
+		width: 1%;
+		margin-left:17rem;	
+	}
+	.menu2 button{
+		width:15rem;
+	}
+}

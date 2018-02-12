@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<title>Games</title>
+		<meta charset="UTF-8">	
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="java.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	
+	</head>
+		
+	<body onload="GetSource1(); GetSource2(); Disable(document.getElementById('btn2')); Disable(document.getElementById('btn1'));">
+	<div class="container">
+		<div class="Yahtzee" id="Jathzee">
+			<div class="menu2">
+				<button onclick="Active2('1');" id="b1_men2">1 Players</button>
+				<button onclick="Active2('2');" id="b2_men2">2 players</button>
+				<button disabled id="start_menu2" onclick="LunchGame2();">Start</button>
+				<button disabled id="ExitBack_menu2" onclick="BreakGamer2()">Exit/Back</button>
+			</div>
+			<div class="players">
+				<p class="playerID">player 1<p>
+				<div class="player_container">
+					<div><img  src="Icons/yat.png" id="dubblesteen1_res" class="dobbelsteen_icon"><p id="value1">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen2_res" class="dobbelsteen_icon"><p id="value2">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen3_res" class="dobbelsteen_icon"><p id="value3">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen4_res" class="dobbelsteen_icon"><p id="value4">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen5_res" class="dobbelsteen_icon"><p id="value5">1</p></div>
+					<button onclick="Roll('player1');" id="btn1">Gooien</button>
+				</div>
+				<div class="Yahtzee_icon_container"><img src="Icons/Yahtzee.png" class="Yahtzee_icon"></div>
+				<p class="playerID">player 2</p>
+				<div class="player_container">
+					<div><img  src="Icons/yat.png" id="dubblesteen1_res2" class="dobbelsteen_icon"><p id="value1_2">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen2_res2" class="dobbelsteen_icon"><p id="value2_2">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen3_res2" class="dobbelsteen_icon"><p id="value3_2">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen4_res2" class="dobbelsteen_icon"><p id="value4_2">1</p></div>
+					<div><img  src="Icons/yat.png" id="dubblesteen5_res2" class="dobbelsteen_icon"><p id="value5_2">1</p></div>
+					<button onclick="Roll('player2');" id="btn2">Gooien</button>
+				</div>
+			</div>
+			
+			<div class="result">
+				<div class="result_container">
+					<div class="player_column">
+						<p>player1</p>
+						<div class="chooice" id="Een"><hr>0</div>
+						<div class="chooice" id="Twee"><hr>0</div>
+						<div class="chooice" id="Drie"><hr>0</div>
+						<div class="chooice" id="Vier"><hr>0</div>
+						<div class="chooice" id="Vijf"><hr>0</div>
+						<div class="chooice" id="Zes"><hr>0</div>
+						<div class="chooice" id="Threeofkind"><hr>0</div>
+						<div class="chooice" id="Caree"><hr>0</div>
+						<div class="chooice" id="Fullhouse"><hr>0</div>
+						<div class="chooice" id="Kleinestraat"><hr>0</div>
+						<div class="chooice" id="Groete straat"><hr>0</div>
+						<div class="chooice" id="5Dice"><hr>0</div>
+						<div class="chooice" id="Chance"><hr>0</div>
+						<div class="chooice" id="Totaal"><hr>0</div>
+					</div>
+					<div class="information_column">
+						<p>information</p><hr>
+						<div class="chooice">Een<hr></div>
+						<div class="chooice">Twee<hr></div>
+						<div class="chooice">Drie<hr></div>
+						<div class="chooice">Vier<hr></div>
+						<div class="chooice">Vijf<hr></div>
+						<div class="chooice">Zes<hr></div>
+						<div class="chooice">Three of kind<hr></div>
+						<div class="chooice">Caree<hr></div>
+						<div class="chooice">Full house<hr></div>
+						<div class="chooice">Kleine straat<hr></div>
+						<div class="chooice">Groete straat<hr></div>
+						<div class="chooice">5Dice<hr></div>
+						<div class="chooice">Chance<hr></div>
+						<div class="chooice">Totaal<hr></div>
+					</div>
+					<div class="player_column">
+						<p>player1</p>
+						<div class="chooice" id="Een"><hr>0</div>
+						<div class="chooice" id="Twee"><hr>0</div>
+						<div class="chooice" id="Drie"><hr>0</div>
+						<div class="chooice" id="Vier"><hr>0</div>
+						<div class="chooice" id="Vijf"><hr>0</div>
+						<div class="chooice" id="Zes"><hr>0</div>
+						<div class="chooice" id="Threeofkind"><hr>0</div>
+						<div class="chooice" id="Caree"><hr>0</div>
+						<div class="chooice" id="Fullhouse"><hr>0</div>
+						<div class="chooice" id="Kleinestraat"><hr>0</div>
+						<div class="chooice" id="Groete straat"><hr>0</div>
+						<div class="chooice" id="5Dice"><hr>0</div>
+						<div class="chooice" id="Chance"><hr>0</div>
+						<div class="chooice" id="Totaal"><hr>0</div>
+					</div>
+				</div>
+				<hr>
+				<div class="menu">
+					<button onclick="Active('1');" id="b1">1 Players</button>
+					<button onclick="Active('2');" id="b2">2 players</button>
+					<button disabled id="start" onclick="LunchGame();">Start</button>
+					<button disabled id="ExitBack" onclick="BreakGamer()">Exit/Back</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
